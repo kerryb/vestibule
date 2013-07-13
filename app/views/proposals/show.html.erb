@@ -4,7 +4,7 @@
       <%= proposal_div(@proposal) do %>
         <%= page_title @proposal.title %>
         <% if can_show_proposal_author_information?(@proposal) %>
-          <p class="alert alert-notice">This proposal by <%= link_to @proposal.proposer.name, @proposal.proposer %> has been chosen by the community to be given at Ruby Manor 4.</p>
+          <p class="alert alert-notice">This proposal by <%= link_to @proposal.proposer.name, @proposal.proposer %> has been chosen by the community to be given at DevCon7.</p>
         <% end %>
 
         <%= proposal_manipulation_actions(@proposal, current_user) %>

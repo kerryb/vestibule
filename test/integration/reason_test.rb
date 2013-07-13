@@ -8,7 +8,7 @@ class ReasonTest < IntegrationTestCase
     end
 
     should "tell the user that they haven't stated a reason for siging up" do
-      assert has_content?("Other attendees are wondering what you hope to get out of Ruby Manor.")
+      assert has_content?("Other attendees are wondering what you hope to get out of DevCon.")
     end
 
     context "be able to provide a reason now" do
@@ -17,7 +17,7 @@ class ReasonTest < IntegrationTestCase
       end
 
       should %Q{not show the "you haven't added a reason" message} do
-        assert !has_content?("Other attendees are wondering what you hope to get out of Ruby Manor.")
+        assert !has_content?("Other attendees are wondering what you hope to get out of DevCon.")
       end
 
       context "be able to provide their sign up reason" do
@@ -70,7 +70,7 @@ I want to make sure that the talks cover something *other* than rails!!
     end
 
     should "not tell the user that they haven't stated a reason for siging up" do
-      assert !has_content?("Other attendees are wondering what you hope to get out of Ruby Manor.")
+      assert !has_content?("Other attendees are wondering what you hope to get out of DevCon.")
     end
   end
 end

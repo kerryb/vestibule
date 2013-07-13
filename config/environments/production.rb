@@ -65,13 +65,13 @@ Vestibule::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.default_url_options = { :host => 'vestibule.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'devcon.nat.bt.com' }
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'rubymanor.org',
+    :domain               => 'devcon.nat.bt.com',
     :user_name            => ENV['GMAIL_SMTP_USER'],
     :password             => ENV['GMAIL_SMTP_PASSWORD'],
     :authentication       => 'plain',

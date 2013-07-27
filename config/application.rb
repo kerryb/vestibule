@@ -28,8 +28,9 @@ module Vestibule
     # as recommended by heroku (https://devcenter.heroku.com/articles/rails-asset-pipeline#troubleshooting)
     config.assets.initialize_on_precompile = false
 
+    require "omniauth/strategies/iuser"
     config.middleware.use OmniAuth::Builder do
-      provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: 'user:email'
+      provider :iuser
     end
   end
 end

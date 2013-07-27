@@ -27,14 +27,13 @@ class User < ActiveRecord::Base
   def self.create_with_omniauth(auth)
     create! do |user|
       user.name = auth["info"]["name"] || auth['info']['nickname']
-      user.github_uid = auth["uid"]
-      user.github_nickname = auth["info"]["nickname"]
+      user.ein = auth["uid"]
       user.email = auth["info"]["email"]
     end
   end
 
   def to_param
-    github_nickname
+    name
   end
 
   REASON_WEIGHT = 5

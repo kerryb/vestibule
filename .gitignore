@@ -7,3 +7,5 @@ vendor/bundle
 config/database.yml
 .env
 Procfile.local
+production_local.rb
+public/assets

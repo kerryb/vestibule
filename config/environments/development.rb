@@ -36,4 +36,17 @@ Vestibule::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.crowd_uri = "http://not-a-real-server/it/gets/stubbed/out/in/development/mode"
+  config.crowd_application_name = "it doesn't matter"
+  config.crowd_application_password = "and neither does this"
+
+  require "webmock"
+  require File.join(Rails.root, "test/support/crowd_stubs")
+  include CrowdStubs
+  include WebMock::API
+  #WebMock.allow_net_connect!
+  stub_authenticate_application
+  stub_authenticate_principal_success
+  stub_find_principal_by_name nil, "Fred", "Bloggs", "fred.bloggs@bt.com"  
 end

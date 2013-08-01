@@ -1,3 +1,5 @@
+require "crowd"
+
 module OmniAuth
   module Strategies
     class Iuser
@@ -9,9 +11,20 @@ module OmniAuth
       def request_phase
         form = OmniAuth::Form.new(title: "Login", url: callback_path)
         form.text_field "EIN", "ein"
-        form.text_field "IUSER password", "password"
+        form.password_field "IUSER password", "password"
         form.button "Sign in"
         form.to_response
+      end
+
+      def callback_phase
+        crowd = Crowd.new(crowd_uri: Rails.configuration.crowd_uri,
+                          application_name: Rails.configuration.crowd_application_name,
+                          application_password: Rails.configuration.crowd_application_password)
+        begin
+          @user_details = crowd.authenticate(request.params[:ein], request.params[:password])
+        rescue => e
+          fail! :invalid_credentials
+        end
       end
 
       uid do
@@ -20,9 +33,9 @@ module OmniAuth
 
       info do
         {
-          ein: request.params[:ein],
-          name: "Fred Bloggs",
-          email: "fred@example.com",
+          ein: uid,
+          name: @user_details[:name],
+          email: @user_details[:email],
         }
       end
     end

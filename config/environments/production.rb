@@ -79,4 +79,6 @@ Vestibule::Application.configure do
   
   # heroku logging will log anything spat to STDOUT so let's do that  
   config.action_controller.logger = Logger.new(STDOUT)
+
+  eval File.read(File.expand_path("../production_local.rb", __FILE__))  
 end

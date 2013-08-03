@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   end
 
   def to_param
-    name
+    ein
   end
 
   REASON_WEIGHT = 5

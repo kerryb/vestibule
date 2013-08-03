@@ -2,8 +2,7 @@ FactoryGirl.define do
   factory :user do |f|
     f.signup_reason "I want to get involved with the content of the conference day"
     f.name { Faker::Name.name }
-    f.sequence(:github_uid) { |n| "#{n}123456" }
-    f.github_nickname { Faker::Lorem.words(2).join('_') }
+    f.sequence(:ein) { |n| "#{n}123456" }
     f.email { Faker::Internet.email }
   end
 

@@ -32,8 +32,8 @@ class IntegrationTestCase < ActiveSupport::TestCase
   end
 
   OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:github] = {
-    "provider"=>"github",
+  OmniAuth.config.mock_auth[:iuser] = {
+    "provider"=>"iuser",
     "uid"=>"123456",
     "info"=>{"name"=>"Alice", "nickname"=>"a_dawg", "email" => "alice@example.com"}
   }

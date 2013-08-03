@@ -1,12 +1,12 @@
 module AuthenticationSteps
   def sign_in(user)
-    OmniAuth.config.mock_auth[:github] = {
-      "provider" => "github",
-      "uid" => user.github_uid,
-      "info" => {"name" => user.name, "nickname" => user.github_nickname,
+    OmniAuth.config.mock_auth[:iuser] = {
+      "provider" => "iuser",
+      "uid" => user.ein,
+      "info" => {"name" => user.name, "ein" => user.ein,
                  "email" => user.email}
     }
-    visit "/auth/github"
+    visit "/auth/iuser"
   end
 
   def there_are_sign_up_and_sign_in_links

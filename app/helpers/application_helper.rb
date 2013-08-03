@@ -64,7 +64,7 @@ module ApplicationHelper
   end
 
   def user_name_for_rss(for_user)
-    %{#{h for_user.name} (@#{h for_user.github_nickname})}.html_safe
+    %{#{h for_user.name} (@#{h for_user.ein})}.html_safe
   end
 
   def user_name(start_sentence = true)

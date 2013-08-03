@@ -1,0 +1,3 @@
+config.crowd_uri = "https://collaborate.bt.com/crowd/services/SecurityServer"
+config.crowd_application_name = "some-user"
+config.crowd_application_password = "some-password"

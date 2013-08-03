@@ -22,7 +22,8 @@ module OmniAuth
                           application_password: Rails.configuration.crowd_application_password)
         begin
           @user_details = crowd.authenticate(request.params[:ein], request.params[:password])
-        rescue => e
+          super
+        rescue
           fail! :invalid_credentials
         end
       end

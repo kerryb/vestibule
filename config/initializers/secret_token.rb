@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Vestibule::Application.config.secret_token = ENV['COOKIE_SECRET']
+Vestibule::Application.config.secret_token = "This isn't really particularly secret, but it's only an internal app"

@@ -23,7 +23,9 @@ module OmniAuth
         begin
           @user_details = crowd.authenticate(request.params[:ein], request.params[:password])
           super
-        rescue
+        rescue => e
+          Rails.logger.warn e.inspect
+          e.backtrace.each {|l| Rails.logger.warn l }
           fail! :invalid_credentials
         end
       end

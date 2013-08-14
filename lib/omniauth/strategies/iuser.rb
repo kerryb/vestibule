@@ -21,7 +21,7 @@ module OmniAuth
                           application_name: Rails.configuration.crowd_application_name,
                           application_password: Rails.configuration.crowd_application_password)
         begin
-          @user_details = crowd.authenticate(request.params[:ein], request.params[:password])
+          @user_details = crowd.authenticate(request.params["ein"], request.params["password"])
           super
         rescue => e
           Rails.logger.warn e.inspect

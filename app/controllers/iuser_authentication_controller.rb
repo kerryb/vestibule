@@ -7,6 +7,10 @@ class IuserAuthenticationController < ApplicationController
     redirect_to root_url, :notice => "Signed in successfully."
   end
 
+  def failure
+    redirect_to root_url, :alert => "Authentication failed"
+  end
+
   def logout
     session[:user_id] = nil
     redirect_to root_url, :notice => "Signed out!"

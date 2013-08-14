@@ -17,6 +17,7 @@ Vestibule::Application.routes.draw do
   match "/dashboard", :to => "dashboard#index"
 
   match "/auth/iuser/callback", :to => "iuser_authentication#callback"
+  match "/auth/failure", :to => "iuser_authentication#failure"
   match "/logout", :to => "iuser_authentication#logout", :as => "logout"
 
   root :to => "home#index"

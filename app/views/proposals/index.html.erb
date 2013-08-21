@@ -1,5 +1,8 @@
 <section>
   <%= page_title 'Talk proposals' %>
+  <p>
+    <%= link_to "#{image_tag 'feed-icon-28x28.png'} RSS feed for proposals".html_safe, format: :rss %>
+  </p>
   <% if user_signed_in? && can?(:make, :proposal) %>
     <div class="action">
       <%= link_to "Propose talk", new_proposal_path, class: "btn btn-primary btn-large" %>

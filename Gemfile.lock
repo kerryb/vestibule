@@ -1,8 +1,8 @@
 GIT
-  remote: git://git.nat.bt.com/iuser_auth/iuser_auth.git
-  revision: 5888639e9027a771b5ed839a252b1b1fc29f53cf
+  remote: git@gitlab.nat.bt.com:iuser_auth/iuser_auth.git
+  revision: 135a95d7f002ef03e2f10c9f9e2c6bb432f7c49e
   specs:
-    iuser_auth (0.0.2)
+    iuser_auth (0.0.6)
       builder
       httparty
       libxml-ruby
@@ -82,8 +82,8 @@ GEM
     ffi (1.9.0)
     hashie (2.0.5)
     hike (1.2.3)
-    httparty (0.11.0)
-      multi_json (~> 1.0)
+    httparty (0.12.0)
+      json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.1)
     journey (1.0.4)
@@ -94,7 +94,7 @@ GEM
     launchy (2.3.0)
       addressable (~> 2.3)
     libv8 (3.11.8.17)
-    libxml-ruby (2.6.0)
+    libxml-ruby (2.7.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -104,7 +104,7 @@ GEM
     mocha (0.13.1)
       metaclass (~> 0.0.1)
     multi_json (1.7.7)
-    multi_xml (0.5.4)
+    multi_xml (0.5.5)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     omniauth (1.1.4)

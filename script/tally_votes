@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+ENV["RAILS_ENV"] = "production"
+require_relative "../config/environment"
+
+Selection
+  .all
+  .group_by(&:proposal)
+  .map {|k,v| [k.title, k.proposer.name, v.count] }
+  .sort_by {|c| -c[2] }
+  .each {|c| printf "%3d %17s: %s\n", c[2], c[1], c[0] }

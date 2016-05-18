@@ -9,3 +9,4 @@ config/database.yml
 Procfile.local
 production_local.rb
 public/assets
+.tags

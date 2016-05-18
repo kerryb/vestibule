@@ -7,7 +7,7 @@
           <%= link_to "#{image_tag 'feed-icon-28x28.png'} RSS feed for suggestions on this proposal".html_safe, format: :rss %>
         </p>
         <% if can_show_proposal_author_information?(@proposal) %>
-          <p class="alert alert-notice">This proposal by <%= link_to @proposal.proposer.name, @proposal.proposer %> has been chosen by the community to be given at DevCon X.</p>
+          <p class="alert alert-notice">This proposal by <%= link_to @proposal.proposer.name, @proposal.proposer %> has been chosen by the community to be given at DevCon 11.</p>
         <% end %>
 
         <%= proposal_manipulation_actions(@proposal, current_user) %>

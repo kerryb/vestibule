@@ -1,5 +1,5 @@
 GIT
-  remote: git@gitlab.nat.bt.com:iuser_auth/iuser_auth.git
+  remote: https://gitlab.nat.bt.com/iuser_auth/iuser_auth.git
   revision: 135a95d7f002ef03e2f10c9f9e2c6bb432f7c49e
   specs:
     iuser_auth (0.0.6)
@@ -51,6 +51,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -58,16 +59,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    columnize (0.3.6)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
     database_cleaner (0.9.1)
-    debugger (1.6.0)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.1)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.2)
     erubis (2.7.0)
     escape_utils (0.1.9)
     execjs (1.4.0)
@@ -93,12 +87,13 @@ GEM
     json (1.8.0)
     launchy (2.3.0)
       addressable (~> 2.3)
-    libv8 (3.11.8.17)
-    libxml-ruby (2.7.0)
+    libv8 (3.16.14.19)
+    libxml-ruby (3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     metaclass (0.0.1)
+    method_source (0.9.0)
     mime-types (1.23)
     mini_portile (0.5.0)
     mocha (0.13.1)
@@ -115,6 +110,9 @@ GEM
       activerecord (>= 2.3)
     pg (0.14.1)
     polyglot (0.3.3)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -141,7 +139,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     redcarpet (2.2.2)
-    ref (1.0.5)
+    ref (2.0.0)
     rubyzip (0.9.9)
     safe_yaml (0.9.4)
     sass (3.2.9)
@@ -168,8 +166,8 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
       ref
     thor (0.18.1)
     tilt (1.4.1)
@@ -196,10 +194,10 @@ DEPENDENCIES
   capybara (= 1.1.4)
   coffee-rails (~> 3.2.1)
   database_cleaner (= 0.9.1)
-  debugger
   escape_utils (= 0.1.9)
   factory_girl_rails (= 4.1.0)
   faker (= 1.1.2)
+  httparty (= 0.12.0)
   iuser_auth!
   jquery-rails
   launchy
@@ -207,6 +205,7 @@ DEPENDENCIES
   omniauth
   paper_trail (= 1.6.4)
   pg (= 0.14.1)
+  pry
   rails (= 3.2.13)
   redcarpet (= 2.2.2)
   sass-rails (~> 3.2.3)
@@ -216,3 +215,9 @@ DEPENDENCIES
   timecop (= 0.5.7)
   uglifier (>= 1.0.3)
   webmock
+
+RUBY VERSION
+   ruby 1.9.3p551
+
+BUNDLED WITH
+   1.16.1

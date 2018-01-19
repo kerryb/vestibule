@@ -6,6 +6,7 @@ gem "pg", "0.14.1"
 gem "simple_form", "2.0.4"
 gem "omniauth"
 gem 'iuser_auth', git: 'https://gitlab.nat.bt.com/iuser_auth/iuser_auth.git'
+gem "httparty", "0.12.0"
 gem "paper_trail", "1.6.4"
 gem "redcarpet", "2.2.2"
 gem "bootstrap-sass"
@@ -35,7 +36,7 @@ group :test do
   gem "webmock"
 
   # Things that aren't *required*, but you might need as you go.
-  gem "debugger"
+  gem "pry"
   gem "launchy"
   gem "escape_utils", "0.1.9"
 end

@@ -4,7 +4,7 @@ ENV["RAILS_ENV"] = "production"
 require_relative "../config/environment"
 
 Proposal
-  .all
+  .where(withdrawn: false)
   .map {|p| [p, Selection.find_all_by_proposal_id(p.id)]}
   .map {|k,v| [k.title, k.proposer.name, v.count] }
   .sort_by {|c| -c[2] }

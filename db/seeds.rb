@@ -7,7 +7,7 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 def user(name)
-  User.create!(:name => name, :github_nickname => name)
+  User.create!(:name => name)
 end
 
 def suggestions_for(proposal, suggestions)

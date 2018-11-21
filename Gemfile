@@ -25,6 +25,11 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem "mocha", "0.13.1", :require => false
+  gem "webmock", "1.13.0"
+end
+
 group :test do
   gem "factory_girl_rails", "4.1.0"
   gem "shoulda", "3.3.2"
@@ -33,7 +38,7 @@ group :test do
   gem "mocha", "0.13.1", :require => false
   gem "faker", "1.1.2"
   gem "timecop", "0.5.7"
-  gem "webmock"
+  gem "webmock", "1.13.0"
 
   # Things that aren't *required*, but you might need as you go.
   gem "pry"
